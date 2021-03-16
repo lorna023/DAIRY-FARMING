@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cafe</title>
+</head>
+<body>
+    <input type="button" value="report" onclick="shedReports()">
+    <p id="display">
+    </p>
+       <h1>Income over time</h1>
+      
+        Input the selling price<input type="number" name="sellingPrice" id="sellingPrice"><br> 
+        Input yearly or weekly <input type="text" name="time" id="time"><br>
+        <button onclick="incomeOverTime(document.getElementById('sellingPrice').value,document.getElementById('time').value)">Add</button>
+      <br>
+      <br>
+        <input type="button" value="Leap Year Report" onclick="leapYearReport()">
+
+      <div id="footer">
+      </div>
+    <script src="index.js"></script>
+</body>
+    </html>
