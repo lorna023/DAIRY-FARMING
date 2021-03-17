@@ -1,26 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>cafe</title>
-</head>
-<body>
-    <input type="button" value="report" onclick="shedReports()">
-    <p id="display">
-    </p>
-       <h1>Income over time</h1>
-      
-        Input the selling price<input type="number" name="sellingPrice" id="sellingPrice"><br> 
-        Input yearly or weekly <input type="text" name="time" id="time"><br>
-        <button onclick="incomeOverTime(document.getElementById('sellingPrice').value,document.getElementById('time').value)">Add</button>
-      <br>
-      <br>
-        <input type="button" value="Leap Year Report" onclick="leapYearReport()">
-
-      <div id="footer">
-      </div>
-    <script src="index.js"></script>
-</body>
-    </html>
+<html>
+    <head>
+        <title>Dairy Business</title>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <script src="index.js"></script>
+        <div id="header">
+            </div>
+        </div>
+        <div id="tank">
+            <div id="dailymilk">
+                <h2>Dairy Business</h2>
+                 <form>
+                    Shed 1 : <input type="text" id="shedA" /><br>
+                    Shed 2: <input type="text" id="shedB" /><br>
+                    Shed 3 : <input type="text" id="shedC" /><br>
+                    Shed 4: <input type="text" id="shedD" /><br>
+                    <input type="button" onClick="daymilk()" Value="Show report" />
+                    <input class="button" type="button" value="Reset" onclick="reset()">
+                 </form>
+                        <h3>Daily production per shed report</h3>
+                        <p>Your production in Shed A is <span id = "sheda"></span> litres per day</p>
+                        <p>Your production in Shed B is <span id = "shedb"></span> litres per day</p>
+                        <p>Your production in Shed C is <span id = "shedc"></span> litres per day</p>
+                        <p>Your production in Shed D is <span id = "shedd"></span> litres per day</p>
+                        <p>The total production is <span id="milk"></span> litres per day</p>
+                    </div>
+            </div>
+            <div id="overtime">
+                <form>
+                    Enter rate of selling in Ksh <input type="text" id="rate"><br>
+                    Enter today's total milk in litres: <input type="text" id="todaymilk" /><br>
+                    <input type="button" onClick="overtime()" Value=" Show Report" />
+                    <input class="button" type="button" value="Reset" onclick="reset()">
+                 </form>
+                      <p>Your weekly income will be Ksh <span id = "week"></span> </p>
+                    <p>Your monthly income will be Ksh <span id = "month"></span></p>
+                    <p>Your yearly income will be Ksh <span id = "year"></span></p>
+            </div>
+            <div id="revenue">
+                Calculate revenue for the whole year
+                <form>
+                    Enter total milk in litres : <input type="text" id="totaldaymilk" /><br>
+                    <input type="button" onClick="wholeyear()" Value=" Show Report" />
+                    <input class="button" type="button" value="Reset" onclick="reset()">
+                 </form>
+                 <span id="revenue"></span>
+            </div>
+        </div>
+       
+    </body>
+</html>
